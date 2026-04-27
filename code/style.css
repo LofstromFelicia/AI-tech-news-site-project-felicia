@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap');
-/*Font funkar nu när den ligger högst upp*/
 
 html {
   background: #eef2ff;
@@ -7,9 +6,9 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif; /* Eller något snyggare sen! */
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  background-color: #f0f2f5; /* ljusgrå för att se boxarna bättre, ändra senare */
+  background-color: #f0f2f5;
   color: #1a1b1e;
 }
 
@@ -20,10 +19,10 @@ p,
   font-family: 'Space Grotesk', sans-serif;
 }
 
-/* MOBIL (Standard) */
+/* MOBIL (Default) */
 .news-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Bara en kolumn */
+  grid-template-columns: 1fr;
   gap: 20px;
   padding: 20px;
 }
@@ -36,15 +35,17 @@ p,
 
 .news-card,
 .hero-card {
-  transition: all 0.4s ease; /* gör ändringar mjuka */
+  transition: all 0.4s ease;
+  /* Makes transition softer */
   cursor: pointer;
 }
 
 .news-card:hover,
 .hero-card:hover {
   background-color: #5d3fd3;
-  transform: translateY(-5px); /*korten lyfter lite grann*/
-  box-shadow: 0 10px 20px rgba(93, 63, 211, 0.3);/* lila tonad skugga */
+  transform: translateY(-5px);
+  /* Card Hover */
+  box-shadow: 0 10px 20px rgba(93, 63, 211, 0.3);
 }
 
 .news-card:hover h2,
@@ -52,24 +53,19 @@ p,
 .news-card:hover p,
 .hero-card:hover p {
   color: #ffffff;
-  /* text blir vit när man hovrar över kortet */
 }
 
 .hero-card {
   max-width: 92%;
-  /*så boxarna är symmetrisk med varandra */
   margin: 0 auto;
-  /* centrerar hero mot resten av content */
+  /* Centers the card and sets top/bottom margins */
   background: white;
   border-radius: 8px;
-  /*lite rundade hörn */
   display: flex;
   flex-direction: column;
   margin-top: 40px;
   margin-bottom: 30px;
-  /* ger avstånd till dem andra korten */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  /* annan skugga än för dem andra */
   padding: 30px;
 }
 
@@ -89,14 +85,12 @@ p,
 .hero-img {
   width: 100%;
   height: 400px;
-  /*lite högre än dem andra */
   object-fit: cover;
   border-radius: 12px;
-  /*mjukare hörn för huvudbilden */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  /*lite skugga */
 }
 
+/* --- HEADER --- */
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -107,7 +101,7 @@ p,
   position: sticky;
   top: 0;
   z-index: 100;
-  /*Sista 3 gör att headern följer med när man scrollar. Hur coolt! */
+  /* Keep navigation visible while scrolling */
 }
 
 .header-logo {
@@ -120,6 +114,7 @@ p,
   font-weight: 900;
 }
 
+/* --- HAMBURGER MENU --- */
 .hamburger-menu {
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -134,21 +129,21 @@ p,
 }
 
 .hamburger-menu:hover {
-  transform: scale(1.10);
-  /*en liten förstöring när man pekar */
+  transform: scale(1.1);
+  /* Subtle change on hover */
 }
 
 .hamburger-menu:hover span {
   background-color: #5d3fd3;
 }
 
+/* --- FOOTER STYLES --- */
 .main-footer {
   background: #1a1a1a;
   color: white;
   padding: 40px 20px;
   text-align: center;
   margin-top: 60px;
-  /* Ger luft mellan sista artikel och footer */
 }
 
 .social-links {
@@ -166,18 +161,16 @@ p,
   text-decoration: underline;
 }
 
-/* TABLET (från 668px bredd) */
+/* TABLET (from 668px: 2 column layout) */
 @media (min-width: 668px) {
   .news-grid {
     grid-template-columns: repeat(2, 1fr);
-    /* 2 kolumner */
   }
 }
 
-/* DESKTOP (från 1024px bredd) */
+/* DESKTOP (from 1024px: 4 column layout) */
 @media (min-width: 1024px) {
   .news-grid {
     grid-template-columns: repeat(4, 1fr);
-    /* 4 kolumner ! */
   }
 }
