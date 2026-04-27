@@ -27,6 +27,19 @@ body {
   border-radius: 8px;
 }
 
+.hero-card {
+  background: white;
+  border-radius: 8px;
+  /*lite rundade hörn */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  /* ger avstånd till dem andra korten */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* annan skugga än för dem andra */
+  padding: 30px;
+}
+
 .news-card h2 {
   font-size: 1.2rem;
   margin-bottom: 10px;
@@ -42,7 +55,13 @@ body {
 
 .hero-img {
   width: 100%;
-  height: auto;
+  height: 400px;
+  /*lite högre än dem andra */
+  object-fit: cover;
+  border-radius: 12px;
+  /*mjukare hörn för huvudbilden */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  /*lite skugga */
 }
 
 /* TABLET (från 668px bredd) */
