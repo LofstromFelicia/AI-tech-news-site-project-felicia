@@ -6,8 +6,9 @@ A modern, responsive news portal focusing on the latest breakthroughs in Artific
 This project was built as my first assignment at Technigo to master the fundamentals of layout and styling. 
 
 ## Live Demo 
-You can view the live site here: [AI Tech News Site] (https://lofstromfelicia.github.io/AI-tech-news-site-project-felicia/
+You can view the live site here: [AI Tech News Site](https://lofstromfelicia.github.io/AI-tech-news-site-project-felicia/
 )
+And on Cloudflare: https://ai-tech-news-site-project-felicia.pages.dev/
 
 ## 📋 Project Goals
 The objective was to create a mobile-first, responsive news site using: 
