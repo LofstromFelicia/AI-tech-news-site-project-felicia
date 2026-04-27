@@ -1,22 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap');
+/*Font funkar nu när den ligger högst upp*/
+
 html {
-  background: #0025ff;
+  background: #eef2ff;
   color: #fff;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  /* Eller något snyggare sen! */
+  font-family: 'Inter', sans-serif; /* Eller något snyggare sen! */
   line-height: 1.6;
-  background-color: #f0f2f5;
-  /* ljusgrå för att se boxarna bättre, ändra senare */
-  color: #1a1a1a;
+  background-color: #f0f2f5; /* ljusgrå för att se boxarna bättre, ändra senare */
+  color: #1a1b1e;
+}
+
+h1,
+h2,
+p,
+.header-title {
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 /* MOBIL (Standard) */
 .news-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  /* Bara en kolumn */
+  grid-template-columns: 1fr; /* Bara en kolumn */
   gap: 20px;
   padding: 20px;
 }
@@ -27,12 +34,38 @@ body {
   border-radius: 8px;
 }
 
+.news-card,
 .hero-card {
+  transition: all 0.4s ease; /* gör ändringar mjuka */
+  cursor: pointer;
+}
+
+.news-card:hover,
+.hero-card:hover {
+  background-color: #5d3fd3;
+  transform: translateY(-5px); /*korten lyfter lite grann*/
+  box-shadow: 0 10px 20px rgba(93, 63, 211, 0.3);/* lila tonad skugga */
+}
+
+.news-card:hover h2,
+.hero-card:hover h1,
+.news-card:hover p,
+.hero-card:hover p {
+  color: #ffffff;
+  /* text blir vit när man hovrar över kortet */
+}
+
+.hero-card {
+  max-width: 92%;
+  /*så boxarna är symmetrisk med varandra */
+  margin: 0 auto;
+  /* centrerar hero mot resten av content */
   background: white;
   border-radius: 8px;
   /*lite rundade hörn */
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
   margin-bottom: 30px;
   /* ger avstånd till dem andra korten */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -62,6 +95,51 @@ body {
   /*mjukare hörn för huvudbilden */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   /*lite skugga */
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /*Sista 3 gör att headern följer med när man scrollar. Hur coolt! */
+}
+
+.header-logo {
+  height: 43px;
+}
+
+.header-title {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+.hamburger-menu:hover {
+  transform: scale(1.10);
+  /*en liten förstöring när man pekar */
+}
+
+.hamburger-menu:hover span {
+  background-color: #5d3fd3;
 }
 
 .main-footer {
