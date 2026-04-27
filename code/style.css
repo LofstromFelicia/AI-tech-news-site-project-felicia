@@ -64,6 +64,30 @@ body {
   /*lite skugga */
 }
 
+.main-footer {
+  background: #1a1a1a;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 60px;
+  /* Ger luft mellan sista artikel och footer */
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: #a29bfe;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.9rem;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
 /* TABLET (från 668px bredd) */
 @media (min-width: 668px) {
   .news-grid {
